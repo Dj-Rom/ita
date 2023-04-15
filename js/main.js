@@ -34,7 +34,7 @@ const resultDrink = document.querySelector('#resultDrink');
 resultDrink.addEventListener('click', () => {
    const allInfoDrink = prompt('«получение информации о напитке»');
    const g = (drinkStorage.getValue(allInfoDrink));
-   ((allInfoDrink) in (drinkStorage)) ?
+   (allInfoDrink in drinkStorage) ?
    alert(`напиток ${allInfoDrink}
    алкогольный: ${g['alcohol']}
    рецепт приготовления:
@@ -44,7 +44,7 @@ resultDrink.addEventListener('click', () => {
 const deleteDrink = document.querySelector('#deleteDrink');
 deleteDrink.addEventListener('click', () => {
    const deleteNameDrink = prompt('«удаление информации о напитке»');
-   ((deleteNameDrink) in (drinkStorage))  ? alert(`${deleteNameDrink} удаленно успешно `) & drinkStorage.deleteValue(deleteNameDrink):alert("Ошибка");
+   (deleteNameDrink in drinkStorage)  ? alert(`${deleteNameDrink} удаленно успешно `) & drinkStorage.deleteValue(deleteNameDrink):alert("Ошибка");
 });
 const allDrink = document.querySelector('#allDrink');
 allDrink.addEventListener('click', () => {
